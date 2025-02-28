@@ -17,18 +17,3 @@ def response_key(endpoint:str) -> str:
         return leaf + 'es'
     else:
         return leaf + 's'
-    
-
-
-# display the API's uber-helful X-Status-Reason in the unlikely event 
-# that we make a bad request
-def handle_request_error(response):
-    if response.status_code == 400:
-        x_header_value = response.headers.get("X-Status-Reason")
-        if x_header_value:
-            print(f"Error: {x_header_value}")
-        else:
-            print("400 Bad Request: No X-Status-Reason found")
-        exit(1)
-    else:
-        response.raise_for_status()
