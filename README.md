@@ -9,6 +9,8 @@ this code is part of the project [Measuring technology complexity to inform clim
 
 `pip install pandas json openpyxl`
 
+for the ML scripts, please check the individual files for dependencies
+
 ### folders
 
 create folder `unlabeled_data` with the unlabled data
