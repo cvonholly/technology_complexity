@@ -15,7 +15,7 @@ for the ML scripts, please check the individual files for dependencies
 
 create folder `unlabeled_data` with the unlabled data
 
-create empty folder `sorted_data`
+create empty folder `sorted_data` and `entropy_data`
 
 create folder `keys` with file `patsviews_key` containing only the PatsView API key
 
