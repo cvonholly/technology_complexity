@@ -19,6 +19,22 @@ def response_key(endpoint:str) -> str:
         return leaf + 's'
     
 
+# for EPO data
+import numpy as np
+
+
+def raw_to_prop_pub(pub_nrs: list):
+    for i in range(len(pub_nrs)):
+        diff = 7 - len(pub_nrs[i])
+        if diff > 0:
+            pub_nrs[i] = '0' * diff + pub_nrs[i]
+        elif diff < 0:
+            print('invalid publication number')
+            pub_nrs[i] = np.nan
+        pub_nrs[i] = 'EP' + pub_nrs[i]
+    return pub_nrs
+    
+
 
 # for claims
 import pandas as pd
