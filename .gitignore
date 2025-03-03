@@ -3,3 +3,4 @@ keys/
 .venv/
 __pycache__/
 sorted_data/
+entropy_data/
